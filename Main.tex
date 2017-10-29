@@ -1,0 +1,121 @@
+% Template for ICASSP-2017 paper; to be used with:
+%          spconf.sty  - ICASSP/ICIP LaTeX style file, and
+%          IEEEbib.bst - IEEE bibliography style file.
+% --------------------------------------------------------------------------
+\documentclass{article}
+\usepackage{spconf,amsmath,graphicx}
+\usepackage{cite}
+%\usepackage[cmex10]{amsmath}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{epsfig}
+\usepackage{algorithmic}
+\usepackage[linesnumbered,ruled,slide]{algorithm2e}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{verbatim}
+\usepackage{caption3}
+\usepackage[justification=centering]{caption}
+\usepackage{epstopdf}
+\usepackage{url}
+\usepackage{array,subfig}
+\usepackage{bm} %%公式加粗
+
+
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+% Title.
+% ------
+\title{Robust Sequence-Based Localization in Acoustic Sensor Networks}
+%
+% Single address.
+% ---------------
+
+%\author{\IEEEauthorblockN{Naigao Jin, Lei Wang，}\\
+%\IEEEauthorblockA{School of Software, Dalian University of Technology, China\\
+%Key Laboratory for Ubiquitous Network and Service Software of Liaoning Province\\
+%ngjin@dlut.edu.cn}
+%\thanks{Naigao Jin is the corresponding author.}
+
+\name{Naigao Jin, Xin Zhou, Zihan Wang, Yu Liu, Lei Wang \thanks{Naigao Jin is the corresponding author.}}
+
+
+\address{School of Software, Dalian University of Technology,China\\
+	Email: {ngjin, lei.wang} @dlut.edu.cn, zhouxin964@gmail.com, zihan.wang@gmail.com, psodream@126.com}
+
+%\address{
+%	School of Software, Dalian University of Technology\\
+%	Key Laboratory for Ubiquitous Network and Service Software of Liaoning Province\\
+%	Dalian,China\\
+%}
+
+%
+% For example:
+% ------------
+%\address{School\\
+%	Department\\
+%	Address}
+%
+% Two addresses (uncomment and modify for two-address case).
+% ----------------------------------------------------------
+%\twoauthors
+%  {A. Author-one, B. Author-two\sthanks{Thanks to XYZ agency for funding.}}
+%	{School A-B\\
+%	Department A-B\\
+%	Address A-B}
+%  {C. Author-three, D. Author-four\sthanks{The fourth author performed the work
+%	while at ...}}
+%	{School C-D\\
+%	Department C-D\\
+%	Address C-D}
+%
+\begin{document}
+	%\ninept
+	%
+	\maketitle
+	%
+	\begin{abstract}
+		
+Acoustic source localization in sensor network is a challenging task because of severe constraints on cost, energy, and effective range of sensor devices.
+To overcome these limitations in existing solutions, this paper formally describes, designs, implements, and evaluates a Half Plane Intersection method to Sequence-Based Localization, i.e., HPI-SBL, in distributed smartphone networks.
+The localization space can be divided into distinct regions, and each region can be uniquely identified by the node sequence that represents the ranking of distances from the reference nodes to the region.
+The key idea behind HPI-SBL is to turn the localization problem into half-plane intersection by processing the node sequence.
+The proposed design is evaluated through extensive simulations and physical experiments in an indoor test-bed with 30 smartphone nodes.
+Evaluation results show that HPI-SBL can effectively locate the acoustic source with good robustness.
+	\end{abstract}
+	%
+	\begin{keywords}
+Sequence-based localization, acoustic sensor networks, half plane intersection 
+	\end{keywords}
+	%
+\input{Introduction}
+\input{Overview}
+\input{Design}
+%\input{Discussion}
+\input{Result}
+%\input{Relatedwork}
+\input{Conclusion}
+	
+	%\vfill\pagebreak
+	
+	
+	\bibliographystyle{IEEEbib}
+	\bibliography{Main}
+	
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

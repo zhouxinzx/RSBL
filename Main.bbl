@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{guo2011localising}
+Yukang Guo and Mike Hazas,
+\newblock ``Localising speech, footsteps and other sounds using
+  resource-constrained devices,''
+\newblock in {\em IEEE/ACM IPSN}, 2011, pp. 330--341.
+
+\bibitem{sallai2011acoustic}
+J{\'a}nos Sallai, Akos L{\'e}deczi, and P{\'e}ter V{\"o}lgyesi,
+\newblock ``Acoustic shooter localization with a minimal number of
+  single-channel wireless sensor nodes,''
+\newblock in {\em ACM SenSys}, 2011, pp. 96--107.
+
+\bibitem{allen2008voxnet}
+Michael Allen, Lewis Girod, Ryan Newton, Samuel Madden, Daniel~T Blumstein, and
+  Deborah Estrin,
+\newblock ``Voxnet: An interactive, rapidly-deployable acoustic monitoring
+  platform,''
+\newblock in {\em IEEE/ACM IPSN}, 2008, pp. 371--382.
+
+\bibitem{zhong2009tracking}
+Ziguo Zhong, Ting Zhu, Dan Wang, and Tian He,
+\newblock ``Tracking with unreliable node sequences,''
+\newblock in {\em IEEE INFOCOM}, 2009, pp. 1215--1223.
+
+\bibitem{yedavalli2008sequence}
+Kiran Yedavalli and Bhaskar Krishnamachari,
+\newblock ``Sequence-based localization in wireless sensor networks,''
+\newblock {\em IEEE Transactions on Mobile Computing (TMC)}, vol. 7, no. 1, pp.
+  81--94, 2008.
+
+\end{thebibliography}

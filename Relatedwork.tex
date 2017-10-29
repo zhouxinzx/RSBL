@@ -1,0 +1,53 @@
+\section{Related Work}
+
+Acoustic source localization in sensor network is a widely-studied problem. 
+In the past few years, there has been a growing interest for spatial distributions of independent (unsynchronized) acoustic sensors, each made of two or more synchronized microphones. Due to space constraints, we can only mention a few directly related works here.
+% Omologo, \emph{et al.} \cite{omologo1994acoustic} compute the Steered Response Power maps associated to all the microphone pairs over a spatial grid and then localize the source
+% as the peak of the cumulative global map, with overall computational costs that are often too demanding for the application at hand.
+% Better computational efficiency is achieved in \cite{cobos2011modified} where the SRP  accommodates a different computation over a coarser grid.
+% Alternate approaches based on Least Squares were proposed in \cite{rabinkin1996dsp} with a certain sensitivity to environmental noise;
+% and in \cite{do2007real} where a stochastic region contraction of the grid was proposed, adopting a multi-resolution approach.
+Wang, \emph{et al.} \cite{wang2003acoustic} described a system having static cluster architecture, the system experienced a problem in that the accuracy decreased when an acoustic source occurred between the clusters.
+Chen, \emph{et al.} \cite{chen2004dynamic} showed that nodes in the system did not need to recognize their cluster head, reducing the constraints on deployment of the localization system.
+Hu, \emph{et al.} \cite{hu2009design} designed the system based on 2-tier architecture, which experienced cost and deployment problems especially in the very large target area.
+Rabbat, \emph{et al.} \cite{rabbat2005robust} proposed a decentralized algorithm based on the distributed ML estimation technique using token ring architecture.
+Kim, \emph{et al.} \cite{kim2009locating} proposed to identify the node closest to the acoustic source, based on TOA comparisons between all nodes, thus incurring high communication cost and requiring global synchronization between all sensor nodes.
+Lightning is a method proposed in \cite{wang2008lightning} to identify the sensor closest to the acoustic source, also based on expensive broadcasting/flooding.
+In previous research on distributed acoustic source localization system, generally each node just has a single element. 
+In the past few years, there has been a growing interest for acoustic nodes made of two or more synchronized microphones. 
+Aarabi, \emph{et al.} ~\cite{aarabi1900fusion} used 10 dual-microphone arrays distributed in a room and used their data to locate three speakers.
+Wu, \emph{et al.} ~\cite{wu2012fusion} used three dual-microphone arrays to locate two sound sources in a distributed way in which only the local DOA estimates are communicated among arrays.
+Canclini, \emph{et al.}\cite{canclini2013acoustic,Canclini2015} proposed a method for localizing an acoustic source with distributed microphone networks based on TDOA between microphones of the same sensor.
+
+Most of the existing acoustic source localization methods in sensor networks are based on range-based measurement.
+In contrast, our work is a range-free method and shown to be robust to the errors of node locations and the errors of measurements.
+There have existed some research on range-free localization method.
+Yedavalli, \emph{et al.} ~\cite{yedavalli2008sequence} proposed a Sequence-Based Localization (SBL) method in WSN. 
+The heart of SBL is the division of a 2D localization space into distinct regions by the perpendicular bisectors of lines joining pairs of reference nodes (nodes with known locations).
+%Each distinct region formed in this manner can be uniquely identified by a location sequence that represents the distance ranks of reference nodes to that region. 
+%The unknown node first determines its own location sequence based on the measurement between itself and the reference nodes, then searches through the location sequence table to determine its location.
+In their earlier work \cite{yedavalli2005ecolocation}, Ecolocation used location constraints for robust localization.
+%A location constraint is a relationship between the distances of two reference nodes from the unknown node that determines its proximity to either
+%reference nodes. Location constraints can be graphically represented by perpendicular bisectors
+%between reference nodes, and each location sequence can be written as a set of location constraints.
+%Thus, the location constraint set is also unique to each region in the arrangement.
+Chakrabarty, \emph{et al.} \cite{chakrabarty2002grid} and Ray, \emph{et al.} \cite{ray2004robust} used identity codes to determine the location of sensor nodes in grid and nongrid sensor fields, respectively. 
+He, \emph{et al.} \cite{he2003range} proposed an RF-based localization technique in which the unknown node location is determined by the intersection of all triangles,
+formed by reference nodes, that are likely to bound it. The unknown node determines its existence inside a triangle by
+comparing its measured RSS values to that of its neighbors to detect a trend in RSS values in any particular direction
+This technique depends on the weak assumption that signal strength decreases monotonically with distance, which is not true in real-world scenarios.
+Zhong, \emph{et al.} \cite{zhong2009tracking} converted the original tracking problem to the problem of finding the shortest path in a graph, which is equivalent to optimal matching of a series of node sequences. 
+Zhong, \emph{et al.} \cite{zhong2011rsd} introduced a proximity metric called RSD to capture the distance relationships among 1-hop neighboring nodes in a range-free manner. 
+Guo, \emph{et al.} \cite{guo2014detecting}  proposed a novel method to detect nodes with data faults by ranking the nodes based on their sensing
+readings from the event.
+Shu, \emph{et al.} \cite{shu2015toc}  proposed a novel localization design that utilizes the unique Time of Charge (TOC) sequences among wireless rechargeable sensors.
+Zhong, \emph{et al.} \cite{zhong2012wireless} presented a Multi-Sequence Positioning (MSP) method for  sensor node localization by processing multiple one-dimensional node sequences.
+Yang, \emph{et al.} \cite{yang2013freeloc} used the relative relationship information between RSS values as the fingerprint data in the Wi-Fi indoor positioning system.
+
+
+%localize nodes based on their connectivity information or simple sensing of their relative positions.
+
+%rang free ??
+%Q. Xu, A. Gerber, Z. M. Mao, and J. Pang. 2011. AccuLoc: Practical localization of performance measurements in 3g networks. In ACM MobiSys.
+
+%rang free ?? L. Doherty, K. S. J. Pister, and L. El Ghaoui. 2001. Convex position estimation in wireless sensor networks.In IEEE INFOCOM.

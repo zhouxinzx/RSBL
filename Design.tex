@@ -1,0 +1,174 @@
+
+
+\section{DESIGN}
+
+In this section, we firstly introduce the basic HPI-SBL method.
+After the basic HPI-SBL method is proposed, we describe the probabilistic HPI-SBL method in the next subsection. Finally, weighted probabilistic HPI-SBL, the robust version of HPI-SBL is given.
+%Finally, the computational complexity analysis of HPI-SBL is given.
+
+\subsection{Basic HPI-SBL }
+
+In this section, we introduce the basic sequence-based localization technique based on half-plane intersection.
+
+Considering a sensor network in the 2D space with $N$ nodes, all nodes are $\bm{X} = \{ \bm{nod{e_1}}, \cdots ,\bm{nod{e_i}}, \cdots ,\bm{nod{e_N}}\}$, 
+where any node $\bm{nod{e_i}}$ has its location coordinate denoted as $[{x_i},{y_i}]$. 
+As showed in Fig. 2, an acoustic event occurs at $\bm{X_s}{\rm{ = [}}{x_s},{y_s}]$, ${d_i}$ is the distance from $\bm{nod{e_i}}$ to the acoustic source $\bm{S}$.
+The node sequence is determined by the distances from nodes to the acoustic source $\bm{S}$.
+
+Basic HPI-SBL turns the localization problem into half-plane intersection by processing the node sequence. 
+The half-planes are constructed by the two adjacent nodes in the node sequences. 
+We can find a solution to narrow the source region by making intersection of these half-planes. 
+Given the following node sequence $NodeSeq( \cdots ,i,j,k,\cdots )$  obtained by time of arrival (TOA) information of the acoustic event,
+we can get the distance sequence ${d_i} < {d_j} < {d_k} $ from  the acoustic source  to each node.
+Just considering the adjacent node, we can have the following $N(N-1)/2$ linear constraints: $d_i<d_j$, $d_i<d_k$ and $d_j<d_k$, etc. 
+We construct the corresponding $N(N-1)/2$  half-planes $H_{ij}$, $H_{ik}$ and $H_{jk}$, etc.
+$d_i<d_j$ means that the acoustic source lies in the left half-plane $H_{ij}$ of the perpendicular bisector of $\bm{nod{e_i}}$ and $\bm{nod{e_j}}$.
+The intersection of  the $N(N-1)/2$  half-planes is the final region of the acoustic source.
+% \begin{algorithm}
+% \caption{Basic HPI-SBL}
+% \KwIn { The location of $N$ smartphones \\
+% \hspace{0.41in} The node sequence of the acoustic source for\\
+% \hspace{0.41in} $N$ reference nodes
+% }
+% \KwOut {Location of the acoustic source}
+
+% \textbf{Step 1:} Setting the original region $R_S$ of acoustic source $S$: $R_S \leftarrow The whole space$;
+
+% \textbf{Step 2:} Narrow the region by half-plane intersection: \\ 
+% \hspace{0.41in} setting $\bm{A}$ and $\bm{b}$ by processing node sequence;\\
+% \For{$i \leftarrow 1$ \textbf{to} $N-1$}
+% {
+% \For{$j \leftarrow i+1$ \textbf{to} $N$}
+% {
+% Use $node_i$ and $node_j$ to contruct half-plane $H_{ij}$;
+
+% Solve half-plane intersection problem to get the target's location.
+
+% $R_S$= $R_S$ U $H_{ij}$
+% }
+% }
+% \textbf{Step 3:} the center of region $R_S$ is the target's location.
+% \end{algorithm}
+
+\subsection{Probabilistic HPI-SBL}
+
+For the sake of presentation, until now we have described HPI-SBL in an ideal case where a complete and perfect node sequence can be obtained. 
+In this section, we describe how to make HPI-SBL work well under more realistic conditions. 
+
+%Basic HPI-SBL can find a solution to this feasibility program only if there is a region satisfying all the constraints. 
+In the practical application, if two nodes are very close to each other along the direction of event propagation, they would detect the event almost simultaneously. 
+In this case, the flip problem of node sequence may occur. 
+%For instance, the true sequence is $NodeSeq ( \cdots ,i,j, \cdots )$, but the detected sequence is $NodeSeq ( \cdots ,j,i, \cdots )$.
+Basic HPI-SBL might fail to find a feasible solution that satisfies all the constraints when sequence flip occurs. 
+For example, as shown in Fig.2, the right middle region identifies by the node sequence $NodeSeq (D B C A)$. 
+Once the order of node A and C is flipped in $NodeSeq (D B C A)$, the region corresponding to $NodeSeq (D B A C)$  does not exist, basic HPI-SBL can not give the accurate estimation.
+In this section, we propose a robust solution to address the problem of sequence flip, called probabilistic HPI-SBL.
+
+ Considering the uncertainty of the measurement with the node sequence $NodeSeq( \cdots ,i,j, \cdots )$, the probability of ${d_i} < {d_j}$ can be described as  
+ \begin{equation}\label{eqq1}
+ p({d_i} < {d_j})>\alpha
+ \end{equation}
+Eq.\ref{eqq1} means that the probability of the acoustic source in the left side of the the half-plane $H_{ij}$ is $\alpha$, and the right side is $1-\alpha$. 
+After dividing the localization space into some discrete grids, the weight of the grid point in the left side of the the half-plane $H_{ij}$ is $\alpha$, and the weight of the grid point in the right side of the the half-plane $H_{ij}$ is $1-\alpha$.
+
+Besides these key constraints mentioned in basic HPI-SBL, some relaxed constraints are also provided some localization information.
+For example, given $NodeSeq (A C B D)$, three key constraints $SA<SC$, $SC<SB$ and $SB<SD$ from the two adjacent nodes,
+and three relaxed constraints $SA<SB$, $SA<SD$ and $SC<SD$ from the two nonadjacent nodes in the node sequence are achieved, respectively. 
+Given the node sequences with $N$ nodes, all  $N(N - 1)/2$  constraints can be ultilized to further improve the localization robustness.
+By processing  $N(N - 1)/2$ half-planes, we can compute the cumulative weight $w$ of each discrete grid point $\bm{x}$
+
+\begin{equation}\label{eq2}
+w(\bm{x})=\sum\limits_{k=1} ^{N-1}\alpha(k).
+\end{equation}
+The region with the highest probability is the final region of the acoustic source
+\begin{equation}\label{eq3}
+\hat{\bm{X_s}}=arg \max_{\bm{x} \in R}w(\bm{x}).
+\end{equation}
+The centroid of the final region is the estimated location of the acoustic source.
+
+To summarize, the probabilistic HPI-SBL is presented in Algorithm 1. 
+The input are the node sequences and anchor locations; the output is the location of the acoustic source. 
+Step 1 sets the the initial weight of each discrete grid point. 
+Step 2 uses the node sequence to get multiple half-planes, then computes the cumulative weight.
+Step 3 adopts the center of the final intersection region as the location of acoustic source.
+
+\begin{algorithm}
+\caption{Probabilistic HPI-SBL}
+\KwIn { The location of $N$ smartphones \\
+\hspace{0.41in} The node sequence of the acoustic source for\\
+\hspace{0.41in} $N$ smartphones
+}
+\KwOut {Location of the acoustic source}
+
+\textbf{Step 1:} Setting the weight of each grid point  $w(k) \leftarrow 0$;
+
+\textbf{Step 2:} Computing the cumulative weight by processing node sequence: \\ 
+\hspace{0.0in} Contructing half planes by processing node sequence;\\
+\For{$i \leftarrow 1$ \textbf{to} $N-1$}
+{
+\For{$j \leftarrow i+1$ \textbf{to} $N$}
+{
+Calculating the probality of the line by the distance of $i,j$\\
+Contructing half plane $H_{ij}$\\
+Updating Weight $w(k)$ by the new probability for each grid point;\\
+}
+}
+\textbf{Step 3:} The center of region with the highest probability is the location of acoustic source.
+\end{algorithm}
+
+
+\subsection{Weighted Probabilistic HPI-SBL}
+
+ Considering the uncertainty of the measurement with the node sequence $NodeSeq( 1,\cdots ,i,j, \cdots,n )$, the probability of ${d_i} < {d_j}$ can be described as  
+ \begin{equation}\label{eq1}
+ p({d_i} < {d_j})>\alpha_{ij}
+ \end{equation}
+
+ In real condition, we consider the probabilities given by different half-plane exist differences. Here we call the line which divide the space as edge. We believe the edge constructed by $i,j$, if closer to the acoustic source, the half-plane divided by it is more essential to localization for determining a more accurate area, meawhile, is more likely to occur flip, we give $\alpha_{ij}$ a smaller value. As for the edges further to the source, its function is inferior in localization, but impossible to occur flip so more believable, we set $\alpha_{ij}$ a large value. In this way, utilizing the weighted probability to determine the acoustic source.
+ 
+As the node sequence $NodeSeq( \cdots ,i,j, \cdots )$ is known to us, for every half-plane, the probability change dynamically according to the distance of the edge to the acoustic source. If the node $i,j$ that construct the half-plane in the sequence is 1 and $n$, as the relative distance is the largest, we set $\alpha_{ij}$ a largest value $\alpha$, if the relative distance of $i,j$ in the sequence is the smallest 1, we give $\alpha_{ij}$ a smallest probability $\beta$. As for other half-planes, we utilize the arithmetic propression between $\alpha$ and $\beta$ by the relative distance of $i,j$ to set their probabilities.
+ \begin{algorithm}
+ 	\caption{Weighted Probabilistic HPI-SBL}
+ 	\KwIn { The location of $N$ smartphones \\
+ 		\hspace{0.41in} The largest probability $\alpha$\\
+ 		\hspace{0.41in} The smallest probability $\beta$\\
+ 		\hspace{0.41in} The node sequence of the acoustic source for\\
+ 		\hspace{0.41in} $N$ smartphones
+ 	}
+ 	\KwOut {Location of the acoustic source}
+ 	
+ 	\textbf{Step 1:} Setting the weight of each grid point  $w(k) \leftarrow 0$;
+ 	
+ 	\textbf{Step 2:} Giving half-plane probabilities and computing the cumulative weight by processing node sequence: \\ 
+ 	\hspace{0.0in} Contructing half planes by processing node sequence;\\
+ 	\For{$i \leftarrow 1$ \textbf{to} $N-1$}
+ 	{
+ 		\For{$j \leftarrow i+1$ \textbf{to} $N$}
+ 		{
+ 			Contructing half plane $H_{ij}$\\
+ 			Calculating $\alpha_{ij}$ between $\alpha$ and $\beta$ according to the relative distance of $i,j$\\
+ 			Updating Weight $w(k)$ for each grid point;\\
+ 		}
+ 	}
+ 	\textbf{Step 3:} The center of region with the highest probability is the location of acoustic source.
+ \end{algorithm}
+
+\iffalse
+ \subsection{Complexity Analysis}
+ This section provides the complexity analysis for the proposed
+ LPSBL design. It needs to be emphasized that
+ LPSBL itself adopts an asymmetric design in which sensor
+ nodes need only to detect and report the events. Therefore,
+ we only analyze the computational cost on the node sequence
+ processing side, where resources are plentiful.
+
+ SBL: Calculating the Spearman’s coefficient and Kendall’s Tau
+ between two sequences are $O(N)$ and $O(N^2)$ operations,
+ respectively. Since the location sequence table is of size
+ $O(N^4)$, searching through it takes $O(N^5)$ and $O(N^6)$ operations,
+ respectively~\cite{yedavalli2008sequence}.
+
+ RSBL: Discrete space grid  M  
+\fi
+
+
