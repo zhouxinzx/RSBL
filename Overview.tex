@@ -3,7 +3,12 @@
 
 % 双栏版式中加入跨栏的图形:在\begin{figure}中加入*即可，即用\begin{figure*}  \end{figure*} ！
 
-\begin{figure}[htb]
+
+
+In this section, we focus mainly on the system overview of our HPI-SBL system, which aims at locating an acoustic source with the node sequence. 
+Fig.1 shows a layout of a acoustic sensor network with $N$ sensor nodes and the acoustic source.
+
+\begin{figure}[h]
   \centering
  %\setlength{\abovecaptionskip}{-15pt}
  %\setlength{\belowcaptionskip}{-5pt}
@@ -11,10 +16,9 @@
     \caption{Overview of HPI-SBL}
  \label{overview}
     \end{figure}
+    \vspace{-3mm}
 
 
-In this section, we focus mainly on the system overview of our HPI-SBL system, which aims at locating an acoustic source with the node sequence. 
-Fig.1 shows a layout of a acoustic sensor network with $N$ sensor nodes and the acoustic source.
 We use circles and the triangle to stand for sensor nodes and the acoustic source, respectively.
 Consider any two reference nodes and draw a perpendicular bisector to the line joining their locations. This perpendicular bisector divides the localization
 space into two different regions that are distinguished by their proximity to either reference nodes, as illustrated in Fig.1. 

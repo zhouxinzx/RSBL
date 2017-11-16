@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.16)  28 OCT 2017 17:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.16)  16 NOV 2017 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -407,12 +407,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 92.
 (./Introduction.tex) (./Overview.tex
-<image/fig1.pdf, id=1, 442.65375pt x 268.75406pt>
-File: image/fig1.pdf Graphic file (type pdf)
- <use image/fig1.pdf>
-Package pdftex.def Info: image/fig1.pdf used on input line 10.
-(pdftex.def)             Requested size: 210.88411pt x 128.0374pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -420,22 +414,27 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
+<image/fig1.pdf, id=10, 442.65375pt x 268.75406pt>
+File: image/fig1.pdf Graphic file (type pdf)
+ <use image/fig1.pdf>
+Package pdftex.def Info: image/fig1.pdf used on input line 15.
+(pdftex.def)             Requested size: 210.88411pt x 128.0374pt.
 Package epstopdf Info: Source file: <image/fig2.eps>
-(epstopdf)                    date: 2017-03-02 21:54:34
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 955700 bytes
 (epstopdf)             Output file: <image/fig2-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-02 21:54:54
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 15715 bytes
 (epstopdf)             Command: <repstopdf --outfile=image/fig2-eps-converted-t
 o.pdf image/fig2.eps>
-(epstopdf)             \includegraphics on input line 44.
+(epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
 
 <image/fig2-eps-converted-to.pdf, id=11, 1262.7175pt x 600.2425pt>
 File: image/fig2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use image/fig2-eps-converted-to.pdf>
-Package pdftex.def Info: image/fig2-eps-converted-to.pdf used on input line 44.
+Package pdftex.def Info: image/fig2-eps-converted-to.pdf used on input line 48.
 
 (pdftex.def)             Requested size: 239.41786pt x 113.81102pt.
 ) (./Design.tex
@@ -451,82 +450,99 @@ od[]\OML/cmm/m/it/10 ; []  ; \OML/cmm/b/it/10 nod[]\OMS/cmsy/m/n/10 g$\OT1/ptm/
 m/n/10 ,
  []
 
-[2 <./image/fig1.pdf> <./image/fig2-eps-converted-to.pdf>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 103.
- [3]) (./Result.tex
+[2 <./image/fig1.pdf> <./image/fig2-eps-converted-to.pdf>]) (./Result.tex
+[3]
 Package epstopdf Info: Source file: <image/nodenumber.eps>
-(epstopdf)                    date: 2017-10-25 13:30:32
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 21029 bytes
 (epstopdf)             Output file: <image/nodenumber-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-10-25 13:32:25
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 8946 bytes
 (epstopdf)             Command: <repstopdf --outfile=image/nodenumber-eps-conve
 rted-to.pdf image/nodenumber.eps>
-(epstopdf)             \includegraphics on input line 48.
+(epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
-
-<image/nodenumber-eps-converted-to.pdf, id=52, 1445.4pt x 852.18375pt>
+ <image/nodenumber-eps-converted-to.pdf, id=52, 1445.4pt x 852.18375pt>
 File: image/nodenumber-eps-converted-to.pdf Graphic file (type pdf)
 
 <use image/nodenumber-eps-converted-to.pdf>
 Package pdftex.def Info: image/nodenumber-eps-converted-to.pdf used on input li
-ne 48.
-(pdftex.def)             Requested size: 199.15665pt x 142.25566pt.
+ne 73.
+(pdftex.def)             Requested size: 131.88889pt x 91.04881pt.
+
+Overfull \hbox (11.98764pt too wide) in paragraph at lines 73--75
+ [][] 
+ []
+
 Package epstopdf Info: Source file: <image/location.eps>
-(epstopdf)                    date: 2017-10-25 14:25:26
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 26310 bytes
 (epstopdf)             Output file: <image/location-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-10-25 14:27:26
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 9573 bytes
 (epstopdf)             Command: <repstopdf --outfile=image/location-eps-convert
 ed-to.pdf image/location.eps>
-(epstopdf)             \includegraphics on input line 68.
+(epstopdf)             \includegraphics on input line 84.
 Package epstopdf Info: Output file is already uptodate.
-
 <image/location-eps-converted-to.pdf, id=53, 1445.4pt x 852.18375pt>
 File: image/location-eps-converted-to.pdf Graphic file (type pdf)
 
 <use image/location-eps-converted-to.pdf>
 Package pdftex.def Info: image/location-eps-converted-to.pdf used on input line
- 68.
-(pdftex.def)             Requested size: 199.15665pt x 142.25566pt.
+ 84.
+(pdftex.def)             Requested size: 131.88889pt x 91.04881pt.
+
+Overfull \hbox (11.98764pt too wide) in paragraph at lines 84--86
+ [][] 
+ []
+
 Package epstopdf Info: Source file: <image/TOA.eps>
-(epstopdf)                    date: 2017-10-25 14:45:37
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 25108 bytes
 (epstopdf)             Output file: <image/TOA-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-10-25 14:47:20
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 9459 bytes
 (epstopdf)             Command: <repstopdf --outfile=image/TOA-eps-converted-to
 .pdf image/TOA.eps>
-(epstopdf)             \includegraphics on input line 84.
+(epstopdf)             \includegraphics on input line 228.
 Package epstopdf Info: Output file is already uptodate.
-
 <image/TOA-eps-converted-to.pdf, id=54, 1445.4pt x 852.18375pt>
 File: image/TOA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use image/TOA-eps-converted-to.pdf>
-Package pdftex.def Info: image/TOA-eps-converted-to.pdf used on input line 84.
-(pdftex.def)             Requested size: 199.15665pt x 142.25566pt.
- [4 <./image/nodenumber-eps-converted-to.pdf>]
+Package pdftex.def Info: image/TOA-eps-converted-to.pdf used on input line 228.
+
+(pdftex.def)             Requested size: 131.88889pt x 91.04881pt.
+
+Overfull \hbox (11.98764pt too wide) in paragraph at lines 228--230
+ [][] 
+ []
+
 Package epstopdf Info: Source file: <image/testbed.eps>
-(epstopdf)                    date: 2017-10-25 17:14:18
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 37096 bytes
 (epstopdf)             Output file: <image/testbed-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-10-25 17:15:24
+(epstopdf)                    date: 2017-11-16 09:08:20
 (epstopdf)                    size: 26023 bytes
 (epstopdf)             Command: <repstopdf --outfile=image/testbed-eps-converte
 d-to.pdf image/testbed.eps>
-(epstopdf)             \includegraphics on input line 145.
+(epstopdf)             \includegraphics on input line 239.
 Package epstopdf Info: Output file is already uptodate.
- <image/testbed-eps-converted-to.pdf, id=66, 1265.72874pt x 732.7375pt>
+<image/testbed-eps-converted-to.pdf, id=55, 1265.72874pt x 732.7375pt>
 File: image/testbed-eps-converted-to.pdf Graphic file (type pdf)
 
 <use image/testbed-eps-converted-to.pdf>
 Package pdftex.def Info: image/testbed-eps-converted-to.pdf used on input line 
-145.
-(pdftex.def)             Requested size: 199.1602pt x 142.26271pt.
-) (./Conclusion.tex) (./Main.bbl
+239.
+(pdftex.def)             Requested size: 131.89148pt x 91.0441pt.
+
+Overfull \hbox (11.99023pt too wide) in paragraph at lines 239--241
+ [][] 
+ []
+
+) (./Conclusion.tex) (./Main.bbl [4 <./image/nodenumber-eps-converted-to.pdf> <
+./image/location-eps-converted-to.pdf> <./image/TOA-eps-converted-to.pdf> <./im
+age/testbed-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 28--32
 []\OT1/ptm/m/n/10 Kiran Ye-davalli and Bhaskar Kr-ish-na-machari,
  []
@@ -542,20 +558,21 @@ Underfull \hbox (badness 1552) in paragraph at lines 28--32
 ut-ing
  []
 
-) [5 <./image/location-eps-converted-to.pdf> <./image/TOA-eps-converted-to.pdf>
- <./image/testbed-eps-converted-to.pdf>] (./Main.aux) )
+) [5
+
+] (./Main.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5196 strings out of 492995
- 78353 string characters out of 6132704
- 166683 words of memory out of 5000000
- 8602 multiletter control sequences out of 15000+600000
- 30140 words of font info for 76 fonts, out of 8000000 for 9000
+ 5190 strings out of 492995
+ 78283 string characters out of 6132704
+ 163683 words of memory out of 5000000
+ 8597 multiletter control sequences out of 15000+600000
+ 28514 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,16n,39p,683b,3473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,39p,683b,3361s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -571,7 +588,7 @@ al/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on Main.pdf (5 pages, 238466 bytes).
+Output written on Main.pdf (5 pages, 235350 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
